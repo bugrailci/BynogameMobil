@@ -9,62 +9,67 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-            <!--The texts at the very top-->
-            <StackLayout Orientation="Horizontal" BackgroundColor="#212529" HeightRequest="40">
-                <Label TextColor="#FFFFFF" Margin="7,7,0,0" Text="    Para Çek     " FontSize="14.4" ></Label>
-                <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
-                <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="    Ödeme Yap    " FontSize="14.4" ></Label>
-                <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
-                <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="      Pazar      " FontSize="14.4" ></Label>
-                <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
-                <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text=" Siparişlerim " FontSize="14.4" ></Label>
-            </StackLayout>
-            <StackLayout BackgroundColor="White">
-                <!--Search Bar-->
+                <!--The texts at the very top-->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#212529" HeightRequest="40">
+                    <Label TextColor="#FFFFFF" Margin="7,7,0,0" Text="    Para Çek     " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="    Ödeme Yap    " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="      Pazar      " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text=" Siparişlerim " FontSize="14.4" ></Label>
+                </StackLayout>
+                <StackLayout BackgroundColor="White">
+                    <!--Search Bar-->
                     <Frame  CornerRadius="0" IsClippedToBounds="True" Padding="0" BorderColor="White" HasShadow="False" >
                         <SearchBar Placeholder="Size nasıl yardımcı olabilirim ?" BackgroundColor="White"/>
-                </Frame>
-                <!--Reklam Carousel-->
-                <StackLayout  BackgroundColor="White" HeightRequest="110">
-                    <CarouselView x:Name="ReklamCarousel" BackgroundColor="White">
-                        <CarouselView.ItemTemplate>
-                            <DataTemplate>
-                                <StackLayout>
+                    </Frame>
+                    <!--Reklam Carousel-->
+                    <StackLayout  BackgroundColor="White" HeightRequest="110">
+                        <CarouselView x:Name="ReklamCarousel" BackgroundColor="White">
+                            <CarouselView.ItemTemplate>
+                                <DataTemplate>
+                                    <StackLayout>
                                         <Frame IsClippedToBounds="True" Padding="0" VerticalOptions="Fill"  HorizontalOptions="Fill" BorderColor="White" HasShadow="False">
                                             <ImageButton Source="{Binding .}" BackgroundColor="White" VerticalOptions="Fill"  HorizontalOptions="Fill"/>
-                                    </Frame>
-                                </StackLayout>
-                            </DataTemplate>
-                        </CarouselView.ItemTemplate>
-                    </CarouselView>
-                </StackLayout>
-                <!--Item Shop-->
-                    <StackLayout BackgroundColor="#FFE9ECEF" Margin="0,0,0,0" Padding="2">
-                    <StackLayout BackgroundColor="White"  Orientation="Vertical" IsClippedToBounds="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                        <Label TextColor="#ED502F" FontSize="20" Text="PAZAR" XAlign="Center"  YAlign="Center" ></Label>
-                    </StackLayout>
-                        <StackLayout BackgroundColor="White">
-                    <flv:FlowListView FlowColumnCount="2"   
-                SeparatorVisibility="Default"   
-                HasUnevenRows="True"  
-                FlowItemTappedCommand="{Binding ItemTappedCommand}"   
-                FlowItemsSource="{Binding Items}">
-
-                        <flv:FlowListView.FlowColumnTemplate>
-                            <DataTemplate>
-                                <Frame BackgroundColor="White"  Margin="5">
-                                    <StackLayout>
-                                                <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"> </Image>
-                                        <Label TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding  Urunismi}"/>
-                                            <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
+                                        </Frame>
                                     </StackLayout>
-                                </Frame>
-                            </DataTemplate>
-                        </flv:FlowListView.FlowColumnTemplate>
-                    </flv:FlowListView>
-                        </StackLayout>
+                                </DataTemplate>
+                            </CarouselView.ItemTemplate>
+                        </CarouselView>
                     </StackLayout>
-                <!--Second Reklam Stacks-->
+                    <!--Item Shop Horizontal-->
+                        <StackLayout BackgroundColor="#FFE9ECEF" Margin="0,0,0,0" Padding="2">
+                            <StackLayout BackgroundColor="White"  Orientation="Vertical" IsClippedToBounds="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                <Label TextColor="#ED502F" FontSize="20" Text="PAZAR" XAlign="Center"  YAlign="Center" ></Label>
+                            </StackLayout>
+                        <ScrollView Orientation="Horizontal">
+                            <StackLayout BackgroundColor="White">
+                                <StackLayout Orientation="Horizontal"
+                                BindableLayout.ItemsSource="{Binding Items}">
+                                    
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer 
+                                        Command="{Binding ItemTappedCommand}" 
+                                        NumberOfTapsRequired="1"/>
+                                    </StackLayout.GestureRecognizers>
+
+                                    <BindableLayout.ItemTemplate>
+                                        <DataTemplate>
+                                            <Frame BackgroundColor="White"  Margin="3">
+                                                <StackLayout HeightRequest="190" WidthRequest="155">
+                                                    <Image  HeightRequest="100" WidthRequest="189" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"></Image>
+                                                    <Label TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding  Urunismi}"/>
+                                                    <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </DataTemplate>
+                                    </BindableLayout.ItemTemplate>
+                                </StackLayout>
+                            </StackLayout>
+                        </ScrollView>
+                    </StackLayout>
+                    <!--Second Reklam Stacks-->
                     <StackLayout BackgroundColor="White">
                         <StackLayout BackgroundColor="#FFE9ECEF">
                             <Frame BackgroundColor="White" IsClippedToBounds="True" HeightRequest="314" BorderColor="White" HasShadow="False">
@@ -82,6 +87,32 @@
                         <StackLayout Orientation="Horizontal" BackgroundColor="Transparent" Margin="0,-12,0,0">
                             <Image Margin="28,0,0,0" BackgroundColor="Transparent" WidthRequest="175" HeightRequest="79"  Source="https://cdn.bynogame.com/site-images/images/menu/reklam_alani/Rust.png" />
                             <Image BackgroundColor="Transparent" WidthRequest="175" HeightRequest="79"  Source="https://cdn.bynogame.com/site-images/images/menu/reklam_alani/Zula_Altin.png" />
+                        </StackLayout>
+                    </StackLayout>
+                    <!--Item Shop-->
+                    <StackLayout BackgroundColor="#FFE9ECEF" Margin="0,0,0,0" Padding="2">
+                        <StackLayout BackgroundColor="White"  Orientation="Vertical" IsClippedToBounds="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <Label TextColor="#ED502F" FontSize="20" Text="PAZAR" XAlign="Center"  YAlign="Center" ></Label>
+                        </StackLayout>
+                        <StackLayout BackgroundColor="White">
+                            <flv:FlowListView FlowColumnCount="2" RowHeight="3"   
+                    SeparatorVisibility="Default"   
+                    HasUnevenRows="True"  
+                    FlowItemTappedCommand="{Binding ItemTappedCommand}"   
+                    FlowItemsSource="{Binding Items}">
+
+                                <flv:FlowListView.FlowColumnTemplate>
+                                    <DataTemplate>
+                                        <Frame BackgroundColor="White"  Margin="5">
+                                            <StackLayout>
+                                                <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"></Image>
+                                                <Label TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding  Urunismi}"/>
+                                                <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </DataTemplate>
+                                </flv:FlowListView.FlowColumnTemplate>
+                            </flv:FlowListView>
                         </StackLayout>
                     </StackLayout>
                 </StackLayout>

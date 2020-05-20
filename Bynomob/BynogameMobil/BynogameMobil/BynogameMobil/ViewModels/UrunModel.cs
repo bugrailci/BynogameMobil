@@ -19,11 +19,11 @@ namespace BynogameMobil.ViewModels
 
         private void AddItems()
         {
-            for (int i = 0; i < 20; i++)
+            for (int i = 0; i < 8; i++)
             {
                 UrunItem urunitem = new UrunItem()
                 {
-                    ImageSource = "https://cdn.bynogame.com/site-images/pazar/gorsel/oyun_parasi/albion_online.jpg",
+                    ImageSource = "https://cdn.bynogame.com/site-images/pazar/gorsel/oyun_parasi/knight_online_steam_ko_gb.jpg",
                     Urunismi = string.Format("Urunismi {0}", i),
                     UrunFiyati= string.Format("UrunFiyati {0}", i)
                 };

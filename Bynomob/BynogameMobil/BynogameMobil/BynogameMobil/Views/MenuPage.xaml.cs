@@ -21,7 +21,13 @@ namespace BynogameMobil.Views
             menuItems = new List<HomeMenuItem>
             {
                 new HomeMenuItem {Id = MenuItemType.Browse, Title="Browse" },
-                new HomeMenuItem {Id = MenuItemType.About, Title="About" }
+                new HomeMenuItem {Id = MenuItemType.About, Title="About" },
+                new HomeMenuItem {Id = MenuItemType.Oyunlar, Title="Oyunlar" },
+                new HomeMenuItem {Id = MenuItemType.KnightOnline, Title="Knight Online" },
+                new HomeMenuItem {Id = MenuItemType.ItemSkin, Title="Item & Skin" },
+                new HomeMenuItem {Id = MenuItemType.Steam, Title="Steam" },
+                new HomeMenuItem {Id = MenuItemType.Pazar, Title="Pazar" },
+                new HomeMenuItem {Id = MenuItemType.Destekle, Title="Destekle" }
             };
 
             ListViewMenu.ItemsSource = menuItems;

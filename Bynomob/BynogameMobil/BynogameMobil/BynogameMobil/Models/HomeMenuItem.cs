@@ -7,7 +7,13 @@ namespace BynogameMobil.Models
     public enum MenuItemType
     {
         Browse,
-        About
+        About,
+        Oyunlar,
+        KnightOnline,
+        ItemSkin,
+        Steam,
+        Pazar,
+        Destekle
     }
     public class HomeMenuItem
     {
