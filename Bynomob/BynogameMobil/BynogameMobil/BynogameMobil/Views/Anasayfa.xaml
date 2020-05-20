@@ -25,7 +25,7 @@
                         <SearchBar Placeholder="Size nasıl yardımcı olabilirim ?" BackgroundColor="White"/>
                     </Frame>
                     <!--Reklam Carousel-->
-                    <StackLayout  BackgroundColor="White" HeightRequest="110">
+                    <StackLayout  BackgroundColor="White" HeightRequest="145">
                         <CarouselView x:Name="ReklamCarousel" BackgroundColor="White">
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
@@ -37,6 +37,15 @@
                                 </DataTemplate>
                             </CarouselView.ItemTemplate>
                         </CarouselView>
+                        <IndicatorView
+                        Grid.Row="0"
+                        Padding="0,0,0,25"
+                        HorizontalOptions="Center"
+                        IndicatorColor="LightGray"
+                        IndicatorSize="25"
+                        IndicatorView.ItemsSourceBy="ReklamCarousel"
+                        SelectedIndicatorColor="#ED502F"
+                        VerticalOptions="End" />
                     </StackLayout>
                     <!--Item Shop Horizontal-->
                         <StackLayout BackgroundColor="#FFE9ECEF" Margin="0,0,0,0" Padding="2">
@@ -47,7 +56,7 @@
                             <StackLayout BackgroundColor="White">
                                 <StackLayout Orientation="Horizontal"
                                 BindableLayout.ItemsSource="{Binding Items}">
-                                    
+
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer 
                                         Command="{Binding ItemTappedCommand}" 
@@ -105,7 +114,7 @@
                                     <DataTemplate>
                                         <Frame BackgroundColor="White"  Margin="5">
                                             <StackLayout>
-                                                <Image HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"></Image>
+                                                <Image HeightRequest="100" WidthRequest="189" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"></Image>
                                                 <Label TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding  Urunismi}"/>
                                                 <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
                                             </StackLayout>

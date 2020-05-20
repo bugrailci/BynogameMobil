@@ -29,6 +29,7 @@ namespace BynogameMobil.Views
             ReklamCarousel.ItemsSource = ReklamCarouseItems;
             UrunModel = new UrunModel(this);
             BindingContext = UrunModel;
+
         }
     }
 }
