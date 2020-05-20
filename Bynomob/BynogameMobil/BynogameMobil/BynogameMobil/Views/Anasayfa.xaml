@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             mc:Ignorable="d"
+             x:Class="BynogameMobil.Views.Anasayfa">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+            <!--The texts at the very top-->
+            <StackLayout Orientation="Horizontal" BackgroundColor="#212529" HeightRequest="32" Padding="10.8">
+                <Label TextColor="#FFFFFF" Margin="7,7,0,0" Text="    Para Çek     " FontSize="14.4" ></Label>
+                <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="    Ödeme Yap    " FontSize="14.4" ></Label>
+                <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="      Pazar      " FontSize="14.4" ></Label>
+                <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text=" Siparişlerim " FontSize="14.4" ></Label>
+            </StackLayout>
+            <StackLayout BackgroundColor="#FFE9ECEF">
+                <!--Search Bar-->
+                <Frame CornerRadius="0" IsClippedToBounds="True" Padding="0" Margin="5">
+                    <SearchBar Placeholder="Size nasıl yardımcı olabilirim ?" BackgroundColor="White"  />
+                </Frame>
+                <!--Reklam Carousel-->
+                <StackLayout  BackgroundColor="#FFE9ECEF" HeightRequest="110" Padding="5">
+                    <CarouselView x:Name="ReklamCarousel" BackgroundColor="#FFE9ECEF">
+                        <CarouselView.ItemTemplate>
+                            <DataTemplate>
+                                <StackLayout>
+                                    <Frame IsClippedToBounds="True" Padding="0" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand">
+                                            <ImageButton Source="{Binding .}" BackgroundColor="#FFE9ECEF" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand"/>
+                                    </Frame>
+                                </StackLayout>
+                            </DataTemplate>
+                        </CarouselView.ItemTemplate>
+                    </CarouselView>
+                </StackLayout>
+                <!--Item Shop-->
+                <StackLayout BackgroundColor="#FFFFFF" Margin="0,0,0,0" Padding="0">
+                    <StackLayout Orientation="Vertical" IsClippedToBounds="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <Label TextColor="#ED502F" FontSize="20" Text="PAZAR" XAlign="Center"  YAlign="Center" ></Label>
+                    </StackLayout>
+                    <flv:FlowListView FlowColumnCount="2"   
+                SeparatorVisibility="Default"   
+                HasUnevenRows="True"  
+                FlowItemTappedCommand="{Binding ItemTappedCommand}"   
+                FlowItemsSource="{Binding Items}">
+
+                        <flv:FlowListView.FlowColumnTemplate>
+                            <DataTemplate>
+                                <Frame BackgroundColor="#FFFFFFF"  Margin="5">
+                                    <StackLayout>
+                                        <Image Source="{Binding ImageSource}"></Image>
+                                        <Label HorizontalOptions="Fill" TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding  Urunismi}"/>
+                                        <Label HorizontalOptions="Fill" TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
+                                    </StackLayout>
+                                </Frame>
+                            </DataTemplate>
+                        </flv:FlowListView.FlowColumnTemplate>
+                    </flv:FlowListView>
+                </StackLayout>
+                <!--Second Reklam Stacks-->
+                <StackLayout BackgroundColor="#FFFFFF" Padding="0" Margin="0,0,0,0" >
+                    <Frame CornerRadius="0" IsClippedToBounds="True" Padding="0" HeightRequest="350" Margin="18,8,18,0" >
+                            <Image BackgroundColor="#FFFFFF" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="https://cdn.bynogame.com/site-images/images/menu/reklam_alani/PUBG_Mobile_Razer_Gold.png" />
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
