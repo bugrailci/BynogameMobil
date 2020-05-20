@@ -601,11 +601,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
+      "projectUniqueName": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
       "projectName": "BynogameMobil",
-      "projectPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
+      "projectPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
       "packagesPath": "C:\\Users\\bugra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\obj\\",
+      "outputPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\"

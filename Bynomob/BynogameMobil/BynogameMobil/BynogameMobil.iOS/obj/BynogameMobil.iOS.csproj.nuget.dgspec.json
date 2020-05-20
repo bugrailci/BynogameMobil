@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj": {}
+    "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj": {
+    "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj",
         "projectName": "BynogameMobil.iOS",
-        "projectPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj",
+        "projectPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\BynogameMobil.iOS.csproj",
         "packagesPath": "C:\\Users\\bugra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\obj\\",
+        "outputPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj": {
-                "projectPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj"
+              "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj": {
+                "projectPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj"
               }
             }
           }
@@ -69,14 +69,14 @@
         }
       }
     },
-    "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj": {
+    "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
+        "projectUniqueName": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
         "projectName": "BynogameMobil",
-        "projectPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
+        "projectPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
         "packagesPath": "C:\\Users\\bugra\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\obj\\",
+        "outputPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\"

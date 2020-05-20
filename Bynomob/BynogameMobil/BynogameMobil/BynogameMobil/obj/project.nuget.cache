@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lSH46e75k01hvLTY0sfURgxrcbpheY4KgOBoT/c+w8GOS5XSR9J334X/N4UHdSR7CwRB+DepUZAyA+Ckii0DEg==",
+  "dgSpecHash": "3fTIUyhBuFcwolRspQL5yoHpcEbPYnGHSligfTq8b6JXZXVihKpQVyIuK6ZdZhgykFXBOwBTnFp8nkE1pMFpLw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
+  "projectFilePath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bugra\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\bugra\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",

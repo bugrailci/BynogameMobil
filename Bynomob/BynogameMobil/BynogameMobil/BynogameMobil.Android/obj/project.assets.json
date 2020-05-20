@@ -1967,11 +1967,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\BynogameMobil.Android.csproj",
+      "projectUniqueName": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\BynogameMobil.Android.csproj",
       "projectName": "BynogameMobil.Android",
-      "projectPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\BynogameMobil.Android.csproj",
+      "projectPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\BynogameMobil.Android.csproj",
       "packagesPath": "C:\\Users\\bugra\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\obj\\",
+      "outputPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -1992,8 +1992,8 @@
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj": {
-              "projectPath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj"
+            "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj": {
+              "projectPath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil\\BynogameMobil.csproj"
             }
           }
         }

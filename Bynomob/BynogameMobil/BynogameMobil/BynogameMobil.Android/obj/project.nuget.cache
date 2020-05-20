@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lFzxNBIHM17txWy/6eDWsHbvg1pRwkn9SU9BDrXXZ4jnXmPnVzhR3HHy+sp3o6BGS9y2FUnlIt+YAv+P0l+cxQ==",
+  "dgSpecHash": "gSYHMwaY2xurheq+9Ex/pmBSjUY7Z+pkJS0rWYyevGqsKhx0aqK7Z5fO+hIG0InImnAWBKSEVP+w9TQdNNUh4Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\bugra\\Desktop\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\BynogameMobil.Android.csproj",
+  "projectFilePath": "C:\\Users\\bugra\\Desktop\\BynogameMobil\\Bynomob\\BynogameMobil\\BynogameMobil\\BynogameMobil.Android\\BynogameMobil.Android.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\bugra\\.nuget\\packages\\dltoolkit.forms.controls.flowlistview\\2.0.11\\dltoolkit.forms.controls.flowlistview.2.0.11.nupkg.sha512",
     "C:\\Users\\bugra\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
