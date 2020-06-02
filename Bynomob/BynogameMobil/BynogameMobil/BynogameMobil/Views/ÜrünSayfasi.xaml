@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BynogameMobil.Views.ÜrünSayfasi">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Margin="5,0,0,0" x:Name="id"></Label>
+            <StackLayout Orientation="Vertical">
+                <Image x:Name="Image"></Image>
+                <StackLayout HorizontalOptions="Center">
+                    <Label HorizontalOptions="Center" x:Name="Name" FontAttributes="Bold" FontSize="10"></Label>
+                    <Label HorizontalOptions="Center" x:Name="Detail" FontAttributes="Bold" FontSize="20" LineBreakMode="WordWrap"></Label>
+                    <Label HorizontalOptions="Center" x:Name="Cost" FontAttributes="Bold" FontSize="10"></Label>
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

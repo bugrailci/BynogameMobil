@@ -6,6 +6,16 @@
              xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              mc:Ignorable="d"
              x:Class="BynogameMobil.Views.Anasayfa">
+
+    <NavigationPage.TitleView>
+
+        <Frame Margin="-40,-10,0,0" IsClippedToBounds="True" CornerRadius="0" Padding="0" HorizontalOptions="Center" BackgroundColor="Transparent">
+            <Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" WidthRequest="120" HeightRequest="80" Source="https://images.bynogame.com/Logo/ByNoGame-Beyaz-TR.png"></Image>
+        </Frame>
+
+    </NavigationPage.TitleView>
+    
+    
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -17,7 +27,7 @@
                     <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
                     <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="      Pazar      " FontSize="14.4" ></Label>
                     <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
-                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text=" Siparişlerim " FontSize="14.4" ></Label>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="  Siparişlerim " FontSize="14.4" ></Label>
                 </StackLayout>
                 <StackLayout BackgroundColor="White">
                     <!--Search Bar-->
@@ -26,7 +36,7 @@
                     </Frame>
                     <!--Reklam Carousel-->
                     <StackLayout  BackgroundColor="White" HeightRequest="145">
-                        <CarouselView x:Name="ReklamCarousel" BackgroundColor="White">
+                        <CarouselView x:Name="ReklamCarousel" BackgroundColor="White" IndicatorView="CarouselIndi">
                             <CarouselView.ItemTemplate>
                                 <DataTemplate>
                                     <StackLayout>
@@ -37,13 +47,13 @@
                                 </DataTemplate>
                             </CarouselView.ItemTemplate>
                         </CarouselView>
-                        <IndicatorView
+                        <IndicatorView x:Name="CarouselIndi"
                         Grid.Row="0"
                         Padding="0,0,0,25"
                         HorizontalOptions="Center"
                         IndicatorColor="LightGray"
                         IndicatorSize="25"
-                        IndicatorView.ItemsSourceBy="ReklamCarousel"
+                        IndicatorsShape="Circle"
                         SelectedIndicatorColor="#ED502F"
                         VerticalOptions="End" />
                     </StackLayout>
@@ -54,17 +64,15 @@
                             </StackLayout>
                         <ScrollView Orientation="Horizontal">
                             <StackLayout BackgroundColor="White">
-                                <StackLayout Orientation="Horizontal"
+                                <StackLayout x:Name="ItemshopH" Orientation="Horizontal"
                                 BindableLayout.ItemsSource="{Binding Items}">
-
-                                    <StackLayout.GestureRecognizers>
-                                        <TapGestureRecognizer 
-                                        Command="{Binding ItemTappedCommand}" 
-                                        NumberOfTapsRequired="1"/>
-                                    </StackLayout.GestureRecognizers>
-
                                     <BindableLayout.ItemTemplate>
                                         <DataTemplate>
+                                            <StackLayout>
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer 
+                                        Tapped="ÜrünTapped2"/>
+                                            </StackLayout.GestureRecognizers>
                                             <Frame BackgroundColor="White"  Margin="3">
                                                 <StackLayout HeightRequest="190" WidthRequest="155">
                                                     <Image  HeightRequest="100" WidthRequest="189" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"></Image>
@@ -72,6 +80,7 @@
                                                     <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
                                                 </StackLayout>
                                             </Frame>
+                                            </StackLayout>
                                         </DataTemplate>
                                     </BindableLayout.ItemTemplate>
                                 </StackLayout>
@@ -104,11 +113,12 @@
                             <Label TextColor="#ED502F" FontSize="20" Text="PAZAR" XAlign="Center"  YAlign="Center" ></Label>
                         </StackLayout>
                         <StackLayout BackgroundColor="White">
-                            <flv:FlowListView FlowColumnCount="2" RowHeight="3"   
+                            <flv:FlowListView x:Name="ItemshopV" FlowColumnCount="2" RowHeight="3"   
                     SeparatorVisibility="Default"   
                     HasUnevenRows="True"  
                     FlowItemTappedCommand="{Binding ItemTappedCommand}"   
-                    FlowItemsSource="{Binding Items}">
+                    FlowItemsSource="{Binding Items}"
+                                              FlowItemTapped="ÜrünTapped">
 
                                 <flv:FlowListView.FlowColumnTemplate>
                                     <DataTemplate>

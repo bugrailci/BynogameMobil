@@ -34,8 +34,9 @@ C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\Bynogam
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\MenuPage.xaml.g.cs
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
-C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\BynogameMobil.csproj.CoreCompileInputs.cache
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\BynogameMobil.AssemblyInfoInputs.cache
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\BynogameMobil.AssemblyInfo.cs
-C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\ItemSkin.xaml.g.cs
+C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\ÜrünSayfasi.xaml.g.cs
+C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\BynogameMobil.csproj.CoreCompileInputs.cache
+C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\XamlC.stamp

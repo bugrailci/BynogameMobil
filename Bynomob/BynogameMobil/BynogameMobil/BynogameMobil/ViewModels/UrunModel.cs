@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using BynogameMobil.Data;
+using BynogameMobil.Views;
 using Xamarin.Forms;
 
 namespace BynogameMobil.ViewModels
@@ -10,54 +12,77 @@ namespace BynogameMobil.ViewModels
     public class UrunModel : BindableObject
     {
         private Page Page;
-
+        RestAPI RestAPI;
         public UrunModel(Page mainPage)
         {
             this.Page = mainPage;
-            AddItems();
+            RestAPI = new RestAPI();
+            //AddItems();
         }
 
-        private void AddItems()
+        public UrunItem FindÜrünItemWithName(string Name)
         {
-            for (int i = 0; i < 8; i++)
+            UrunItem urunItem = new UrunItem();
+            foreach (var item in RestAPI.GetProducts())
             {
-                UrunItem urunitem = new UrunItem()
+                if (Name == item.Name)
                 {
-                    ImageSource = "https://cdn.bynogame.com/site-images/pazar/gorsel/oyun_parasi/knight_online_steam_ko_gb.jpg",
-                    Urunismi = string.Format("Urunismi {0}", i),
-                    UrunFiyati= string.Format("UrunFiyati {0}", i)
-                };
-                Items.Add(urunitem);
-            }
+                    urunItem = new UrunItem()
+                    {
+                        ImageSource = item.Url,
+                        Urunismi = item.Name,
+                        UrunDetayi = item.Info,
+                        UrunFiyati = item.Cost.ToString()
 
-        }
-
-        private ObservableCollection<UrunItem> _items = new ObservableCollection<UrunItem>();
-        public ObservableCollection<UrunItem> Items
-        {
-            get
-            {
-                return _items;
-            }
-            set
-            {
-                if (_items != value)
-                {
-                    _items = value;
-                    OnPropertyChanged(nameof(Items));
+                    };
+                    break;
                 }
             }
+            return urunItem;
+        }
+        public ObservableCollection<UrunItem> GetItems(int numberOfItem)
+        {
+            ObservableCollection<UrunItem> Items = new ObservableCollection<UrunItem>();
+            foreach (var item in RestAPI.GetProducts())
+            {
+
+                UrunItem urunItem = new UrunItem()
+                {
+                    ImageSource = item.Url,
+                    Urunismi = item.Name,
+                    UrunDetayi = item.Info,
+                    UrunFiyati = item.Cost.ToString()
+
+                };
+                Items.Add(urunItem);
+                if (Items.Count == numberOfItem)
+                {
+                    break;
+                }
+
+            }
+            return Items;
         }
 
-        public Command ItemTappedCommand
+        public ObservableCollection<UrunItem> GetAllItems()
         {
-            get
+            ObservableCollection<UrunItem> Items = new ObservableCollection<UrunItem>();
+
+            foreach (var item in RestAPI.GetProducts())
             {
-                return new Command((data) =>
+
+                UrunItem urunItem = new UrunItem()
                 {
-                    Page.DisplayAlert("FlowListView", data + "", "Ok");
-                });
+                    ImageSource = item.Url,
+                    Urunismi = item.Name,
+                    UrunDetayi = item.Info,
+                    UrunFiyati = item.Cost.ToString()
+
+                };
+                Items.Add(urunItem);
+
             }
+            return Items;
         }
     }
 }
