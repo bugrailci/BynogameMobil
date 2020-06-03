@@ -40,3 +40,6 @@ C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\Bynogam
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\ÜrünSayfasi.xaml.g.cs
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\BynogameMobil.csproj.CoreCompileInputs.cache
 C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\Sepetim.xaml.g.cs
+C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\CSGOSkinPage.xaml.g.cs
+C:\Users\bugra\Desktop\BynogameMobil\Bynomob\BynogameMobil\BynogameMobil\BynogameMobil\obj\Debug\netstandard2.0\Views\AramaSayfası.xaml.g.cs

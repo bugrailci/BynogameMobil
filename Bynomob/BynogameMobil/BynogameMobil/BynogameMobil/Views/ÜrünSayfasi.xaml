@@ -5,17 +5,55 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="BynogameMobil.Views.ÜrünSayfasi">
+    <NavigationPage.TitleView>
+        <Frame Margin="-20,-10,0,0" IsClippedToBounds="True" CornerRadius="0" Padding="0" HorizontalOptions="Center" BackgroundColor="Transparent">
+            <Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" WidthRequest="120" HeightRequest="80" Source="https://images.bynogame.com/Logo/ByNoGame-Beyaz-TR.png"></Image>
+        </Frame>
+    </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="MenuItem1" Order="Primary"  IconImageSource="sepetcart.png" Priority="0"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Margin="5,0,0,0" x:Name="id"></Label>
-            <StackLayout Orientation="Vertical">
-                <Image x:Name="Image"></Image>
-                <StackLayout HorizontalOptions="Center">
-                    <Label HorizontalOptions="Center" x:Name="Name" FontAttributes="Bold" FontSize="10"></Label>
-                    <Label HorizontalOptions="Center" x:Name="Detail" FontAttributes="Bold" FontSize="20" LineBreakMode="WordWrap"></Label>
-                    <Label HorizontalOptions="Center" x:Name="Cost" FontAttributes="Bold" FontSize="10"></Label>
+        <ScrollView>
+            <StackLayout>
+                <!--The texts at the very top-->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#212529" HeightRequest="40">
+                    <Label TextColor="#FFFFFF" Margin="7,7,0,0" Text="    Para Çek     " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="    Ödeme Yap    " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="      Pazar      " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="  Siparişlerim " FontSize="14.4" ></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Label Margin="5,0,0,0" x:Name="id"></Label>
+                    <StackLayout Orientation="Vertical">
+                        <Image x:Name="Image"></Image>
+                        <StackLayout HorizontalOptions="Center">
+                            <Label HorizontalOptions="Center" x:Name="Name" TextColor="Green" FontAttributes="Bold" FontSize="10"></Label>
+                            <Label HorizontalOptions="Center" x:Name="Detail" TextColor="Red" FontAttributes="Bold" FontSize="10" LineBreakMode="WordWrap"></Label>
+                            <Label HorizontalOptions="Center" TextColor="OrangeRed"  XAlign="Center"  YAlign="Center">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="₺"  FontSize="Medium" FontAttributes="Bold"/>
+                                        <Span x:Name="Cost" FontSize="20" FontAttributes="Bold"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout>
+                    <Image Source="Itemdet"  VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"></Image>
+                </StackLayout>
+                <StackLayout BackgroundColor="White">
+                    <!--Bottom-->
+                    <StackLayout BackgroundColor="#E2E2E2">
+                        <Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="bynobottom.png"></Image>
+                    </StackLayout>
                 </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

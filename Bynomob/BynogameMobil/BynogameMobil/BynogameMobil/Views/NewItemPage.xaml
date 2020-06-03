@@ -3,22 +3,51 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
              mc:Ignorable="d"
              x:Class="BynogameMobil.Views.NewItemPage"
              Title="New Item">
-    
     <ContentPage.ToolbarItems>
+
         <ToolbarItem Text="Cancel" Clicked="Cancel_Clicked" />
         <ToolbarItem Text="Save" Clicked="Save_Clicked" />
+        <ToolbarItem x:Name="MenuItem1" Order="Primary"  IconImageSource="sepetcart.png" Priority="0"/>
     </ContentPage.ToolbarItems>
     
+    <NavigationPage.TitleView>
+        <Frame Margin="-20,-10,0,0" IsClippedToBounds="True" CornerRadius="0" Padding="0" HorizontalOptions="Center" BackgroundColor="Transparent">
+            <Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" WidthRequest="120" HeightRequest="80" Source="https://images.bynogame.com/Logo/ByNoGame-Beyaz-TR.png"></Image>
+        </Frame>
+
+    </NavigationPage.TitleView>
+
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Item.Text}" d:Text="Item name" FontSize="Small" />
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Small" Margin="0" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <!--The texts at the very top-->
+                <StackLayout Orientation="Horizontal" BackgroundColor="#212529" HeightRequest="40">
+                    <Label TextColor="#FFFFFF" Margin="7,7,0,0" Text="    Para Çek     " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="    Ödeme Yap    " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="      Pazar      " FontSize="14.4" ></Label>
+                    <Image BackgroundColor="#FFFFFF" HeightRequest="28" WidthRequest="2"></Image>
+                    <Label TextColor="#FFFFFF" Margin="0,7,0,0" Text="  Siparişlerim " FontSize="14.4" ></Label>
+                </StackLayout>
+                <StackLayout Spacing="20" Padding="15">
+                    <Label Text="Text" FontSize="Medium" />
+                    <Entry Text="{Binding Item.Text}" d:Text="Item name" FontSize="Medium" />
+                    <Label Text="Description" FontSize="Medium" />
+                    <Editor Text="{Binding Item.Description}" d:Text="Item description" FontSize="Large" Margin="0" />
+                </StackLayout>
+                <StackLayout BackgroundColor="White">
+                    <!--Bottom-->
+                    <StackLayout BackgroundColor="#E2E2E2">
+                        <Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="bynobottom.png"></Image>
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
-    
 </ContentPage>
+    

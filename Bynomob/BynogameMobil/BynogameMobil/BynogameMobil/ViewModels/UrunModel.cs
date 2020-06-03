@@ -64,6 +64,7 @@ namespace BynogameMobil.ViewModels
             return Items;
         }
 
+
         public ObservableCollection<UrunItem> GetAllItems()
         {
             ObservableCollection<UrunItem> Items = new ObservableCollection<UrunItem>();

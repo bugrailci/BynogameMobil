@@ -7,15 +7,18 @@
              mc:Ignorable="d"
              x:Class="BynogameMobil.Views.Anasayfa">
 
-    <NavigationPage.TitleView>
-
-        <Frame Margin="-40,-10,0,0" IsClippedToBounds="True" CornerRadius="0" Padding="0" HorizontalOptions="Center" BackgroundColor="Transparent">
+        <NavigationPage.TitleView>
+        <Frame Margin="-20,-10,0,0" IsClippedToBounds="True" CornerRadius="0" Padding="0" HorizontalOptions="Center" BackgroundColor="Transparent">
             <Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" WidthRequest="120" HeightRequest="80" Source="https://images.bynogame.com/Logo/ByNoGame-Beyaz-TR.png"></Image>
         </Frame>
 
-    </NavigationPage.TitleView>
+         </NavigationPage.TitleView>
+    <ContentPage.ToolbarItems>
+        <ToolbarItem x:Name="MenuItem1" Order="Primary"  IconImageSource="sepetcart.png" Priority="0"/>
+    </ContentPage.ToolbarItems>
     
-    
+
+
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -34,6 +37,8 @@
                     <Frame  CornerRadius="0" IsClippedToBounds="True" Padding="0" BorderColor="White" HasShadow="False" >
                         <SearchBar Placeholder="Size nasıl yardımcı olabilirim ?" BackgroundColor="White"/>
                     </Frame>
+                    <!--Arama bişeyleri-->
+
                     <!--Reklam Carousel-->
                     <StackLayout  BackgroundColor="White" HeightRequest="145">
                         <CarouselView x:Name="ReklamCarousel" BackgroundColor="White" IndicatorView="CarouselIndi">
@@ -60,7 +65,7 @@
                     <!--Item Shop Horizontal-->
                         <StackLayout BackgroundColor="#FFE9ECEF" Margin="0,0,0,0" Padding="2">
                             <StackLayout BackgroundColor="White"  Orientation="Vertical" IsClippedToBounds="True" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                                <Label TextColor="#ED502F" FontSize="20" Text="PAZAR" XAlign="Center"  YAlign="Center" ></Label>
+                                <Label TextColor="#ED502F" FontSize="20" Text="ÇOK SATANLAR" XAlign="Center"  YAlign="Center" ></Label>
                             </StackLayout>
                         <ScrollView Orientation="Horizontal">
                             <StackLayout BackgroundColor="White">
@@ -77,8 +82,15 @@
                                                 <StackLayout HeightRequest="190" WidthRequest="155">
                                                     <Image  HeightRequest="100" WidthRequest="189" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"></Image>
                                                     <Label TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding  Urunismi}"/>
-                                                    <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
-                                                </StackLayout>
+                                                        <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center">
+                                                            <Label.FormattedText>
+                                                                <FormattedString>
+                                                                    <Span Text="₺"  FontSize="Medium" FontAttributes="Bold"/>
+                                                                    <Span Text="{Binding UrunFiyati}" FontAttributes="Bold"/>
+                                                                </FormattedString>
+                                                            </Label.FormattedText>
+                                                        </Label>
+                                                    </StackLayout>
                                             </Frame>
                                             </StackLayout>
                                         </DataTemplate>
@@ -126,13 +138,24 @@
                                             <StackLayout>
                                                 <Image HeightRequest="100" WidthRequest="189" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Source="{Binding ImageSource}"></Image>
                                                 <Label TextColor="#ED502F"  XAlign="Center"  YAlign="Center"   Text="{Binding  Urunismi}"/>
-                                                <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center"   Text="{Binding UrunFiyati}"/>
+                                                <Label BackgroundColor="#FFE9ECEF" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" TextColor="#435064"  XAlign="Center"  YAlign="Center">
+                                                    <Label.FormattedText>
+                                                        <FormattedString>
+                                                            <Span Text="₺"  FontSize="Medium" FontAttributes="Bold"/>
+                                                            <Span Text="{Binding UrunFiyati}" FontAttributes="Bold"/>
+                                                        </FormattedString>
+                                                    </Label.FormattedText>
+                                                </Label>
                                             </StackLayout>
                                         </Frame>
                                     </DataTemplate>
                                 </flv:FlowListView.FlowColumnTemplate>
                             </flv:FlowListView>
                         </StackLayout>
+                    </StackLayout>
+                    <!--Bottom-->
+                    <StackLayout BackgroundColor="#E2E2E2">
+                        <Image VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Source="bynobottom.png"></Image>
                     </StackLayout>
                 </StackLayout>
             </StackLayout>

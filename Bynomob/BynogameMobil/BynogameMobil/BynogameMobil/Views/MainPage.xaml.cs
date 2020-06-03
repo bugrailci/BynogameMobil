@@ -37,7 +37,7 @@ namespace BynogameMobil.Views
                         MenuPages.Add(id, new NavigationPage(new AboutPage()));
                         break;
                     case (int)MenuItemType.ItemSkin:
-                        MenuPages.Add(id, new NavigationPage(new ItemSkin()));
+                        MenuPages.Add(id, new NavigationPage(new CSGOSkinPage()));
                         break;
                 }
             }

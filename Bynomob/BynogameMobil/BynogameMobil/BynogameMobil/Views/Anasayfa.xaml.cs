@@ -20,6 +20,7 @@ namespace BynogameMobil.Views
             UrunModel UrunModel;
             List<string> ReklamCarouseItems = new List<string>()
             {
+                "https://cdn.bynogame.com/site-images/banners/csgo_bize_sat_6.jpg",
                 "https://cdn.bynogame.com/site-images/banners/bdo_ramazan_etkinlikleri.jpg",
                 "https://cdn.bynogame.com/site-images/banners/tinder.jpg",
                 "https://cdn.bynogame.com/site-images/banners/blutv_2.jpg",
